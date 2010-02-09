@@ -15,15 +15,17 @@
 #  limitations under the License. 
 #
 
-# Include resfulie in path load
-libdir = File.dirname(__FILE__)
-$LOAD_PATH.unshift(libdir) unless $LOAD_PATH.include?(libdir)
+require 'net/http'
+require 'uri'
+require 'atom'
 
-require 'restfulie/client'
-require 'restfulie/server'
+# TODO Remove this after remove Media Types (if need?)
+require 'action_controller'
+require 'active_support'
 
-class Object
-  extend Restfulie
-end
+require 'vendor/jeokkarak/jeokkarak'
 
-include ActiveSupport::CoreExtensions::Hash
+require 'restfulie/common/logger'
+require 'restfulie/common/media_type'
+require 'restfulie/common/unmarshalling'
+require 'restfulie/common/restfulie'

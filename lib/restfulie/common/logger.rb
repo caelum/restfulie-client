@@ -15,15 +15,16 @@
 #  limitations under the License. 
 #
 
-# Include resfulie in path load
-libdir = File.dirname(__FILE__)
-$LOAD_PATH.unshift(libdir) unless $LOAD_PATH.include?(libdir)
-
-require 'restfulie/client'
-require 'restfulie/server'
-
-class Object
-  extend Restfulie
+module Restfulie 
+  module Logger
+    # Configure the logger used by Restfulie
+    # 
+    # The logger defaults to ActiveSupport::BufferedLogger.new(STDOUT)
+    class << self
+      attr_accessor :logger
+    end
+  end
 end
 
-include ActiveSupport::CoreExtensions::Hash
+Restfulie::Logger.logger = ActiveSupport::BufferedLogger.new(STDOUT)
+Restfulie::Logger.logger.level = Logger::DEBUG

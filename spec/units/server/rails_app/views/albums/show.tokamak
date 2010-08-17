@@ -1,3 +1,0 @@
-member(@album) do |member, album|
-  partial("member", :locals => { :member => member, :album => @album })
-end

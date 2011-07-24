@@ -18,6 +18,5 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_dependency("activesupport", '~> 3.0.9')
-  s.add_dependency('hypertemplate', "~> 1.2.0")
   s.add_dependency('medie', "~> 1.0.0")
 end

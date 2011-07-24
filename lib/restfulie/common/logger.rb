@@ -1,3 +1,5 @@
+require 'active_support/core_ext/logger'
+
 module Restfulie
   module Common
     class Logger

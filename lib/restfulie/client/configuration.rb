@@ -1,3 +1,5 @@
+require 'active_support/core_ext/string/access'
+
 module Restfulie
   module Client #:nodoc:
     # Use this class to configure the entry point and other relevant behaviors related to accessing or interacting with resources

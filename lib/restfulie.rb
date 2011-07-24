@@ -3,7 +3,6 @@ $:.unshift(File.dirname(__FILE__)) unless $:.include?(File.dirname(__FILE__))
 require 'restfulie/version'
 require 'restfulie/common'
 require 'restfulie/client'
-require 'restfulie/server'
 
 # Shortcut to RestfulieDsl
 module Restfulie

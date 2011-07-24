@@ -1,8 +1,6 @@
 require 'net/http'
 require 'uri'
 
-require 'rubygems'
-require 'hypertemplate'
 require 'medie'
 
 module Restfulie

@@ -1,4 +1,4 @@
-source :gemcutter
+source :rubygems
 
 gemspec
 
@@ -8,15 +8,9 @@ else
   gem "ruby-debug19", :require => "ruby-debug"
 end
 
-group :development do
-  gem "yard"
-end
+gem 'rake', '~> 0.9.2'
 
 group :test do  
-  gem "rspec-rails", ">= 2.3.0"
-  gem "rcov"
-  gem "sinatra"
-	gem "state_machine"
-  gem "test-unit", "= 1.2.3"
+  gem "rspec", ">= 2.3.0"
 	gem "fakeweb"
 end  

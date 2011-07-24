@@ -12,31 +12,12 @@ Gem::Specification.new do |s|
 	s.summary     = %q{Hypermedia aware resource based library in ruby (client side).}
 	s.description = %q{restfulie-client}
 
-	s.rubyforge_project = "restfulie-client"
-
 	s.files         = `git ls-files`.split("\n")
 	s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
 	s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
 	s.require_paths = ["lib"]
 
-	if s.respond_to? :specification_version then
-		current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
-		s.specification_version = 3
-	end
-
-  if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-    s.add_runtime_dependency("nokogiri", [">= 1.4.2"])
-    s.add_runtime_dependency("json_pure", [">= 1.2.4"])
-    s.add_development_dependency("sqlite3-ruby")
-  else
-    s.add_dependency("nokogiri", [">= 1.4.2"])
-    s.add_dependency("json_pure", [">= 1.2.4"])
-    s.add_dependency("sqlite3-ruby")
-  end
-
   s.add_dependency("activesupport", '~> 3.0.9')
-  s.add_dependency("rack-conneg")
   s.add_dependency('hypertemplate', "~> 1.2.0")
   s.add_dependency('medie', "~> 1.0.0")
-  s.add_dependency('respondie', "~> 0.9.0")
 end

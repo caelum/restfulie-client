@@ -1,5 +1,4 @@
 coverage
-Gemfile.lock
 test.sqlite3
 doc
 *.gem
